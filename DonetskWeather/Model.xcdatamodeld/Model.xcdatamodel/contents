@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="City" representedClassName="TTCity" syncable="YES">
+        <attribute name="idx" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="wheter" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Weather" inverseName="city" inverseEntity="Weather" syncable="YES"/>
+    </entity>
+    <entity name="Weather" representedClassName="TTWeather" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temp" optional="YES" attributeType="Integer 32" defaultValueString="-2147483648" syncable="YES"/>
+        <attribute name="tempHigh" optional="YES" attributeType="Integer 32" defaultValueString="-2147483648" syncable="YES"/>
+        <attribute name="tempLow" optional="YES" attributeType="Integer 32" defaultValueString="-2147483648" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="city" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="wheter" inverseEntity="City" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="117" positionY="-90" width="128" height="90"/>
+        <element name="Weather" positionX="-198" positionY="-99" width="128" height="180"/>
+    </elements>
+</model>
